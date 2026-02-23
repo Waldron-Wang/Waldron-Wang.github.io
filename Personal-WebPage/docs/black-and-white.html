@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black and White | Waldron Wang</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">WW.</a></div>
+        <ul class="nav-links">
+            <li><a href="../index.html#projects">← Back to Portfolio</a></li>
+            <li><a href="resume.pdf" target="_blank" class="btn-outline">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-hero container">
+        <h1>Black and White</h1>
+        <p class="tech-stack-large">C# | Unity | Maya | Technical Art Pipeline</p>
+        <div class="project-links">
+            <a href="https://github.com/Waldron-Wang/Black-and-White" target="_blank" class="btn-outline">View GitHub Repository</a>
+        </div>
+    </header>
+
+    <section class="container project-detail-section">
+        <h2>The Vision: Order vs. Chaos</h2>
+        <p class="game-summary" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 30px;">
+            <em>Black and White</em> was conceived as a dark fantasy action game built around a "one body, two souls" core mechanic. The narrative follows Aeon, a guardian whose soul is violently split into two opposing entities: Black, representing raw chaos, rebellion, and primal instinct, and White, representing absolute, unyielding order and rationality. The gameplay was designed to reflect this dichotomy, forcing the player to navigate a hostile world outside the city walls while balancing two entirely different combat skill trees.
+        </p>
+    </section>
+
+    <section class="container project-detail-section">
+        <h2 style="margin-bottom: 30px;">Engineering the Art Pipeline</h2>
+        
+        <div style="margin-bottom: 50px;">
+            <h3 style="margin-bottom: 15px; color: var(--text-primary);">Inspiration & Research</h3>
+            <p><strong>The Bottleneck:</strong> In a previous project, I spent over a month agonizingly hand-drawing just 100 frames of simple 3-frame attack animations. It was inefficient and creatively draining. For an action game requiring fluid, complex combat, traditional frame-by-frame pixel art was mathematically impossible for a small indie team.</p>
+            <p style="margin-top: 15px;"><strong>The Research:</strong> I began researching alternative workflows and discovered an interview with the art director of <em>Dead Cells</em>. They faced the exact same problem and solved it by rendering 3D models into 2D pixel animations using a custom software pipeline. Inspired, I set out to reverse-engineer and adapt this pipeline for our Unity project.</p>
+        </div>
+
+        <div>
+            <h3 style="margin-bottom: 25px; color: var(--text-primary);">Implementation</h3>
+            
+            <div class="scroll-cards" style="margin-bottom: 40px; padding-top: 10px;">
+                <div class="card" style="background: transparent;">
+                    <img src="../assets/image/black_3dmodel.JPG" alt="Step 1: 3D Character Mesh" class="card-image" style="height: 350px; border-radius: 16px;">
+                </div>
+                <div class="card" style="background: transparent;">
+                    <img src="../assets/image/black_run.PNG" alt="Step 2: Mixamo Rigging" class="card-image" style="height: 350px; border-radius: 16px;">
+                </div>
+                <div class="card" style="background: transparent;">
+                    <img src="../assets/image/black_runNormalMap.PNG" alt="Step 3: Unity Pixel Shader" class="card-image" style="height: 350px; border-radius: 16px;">
+                </div>
+                <div class="card" style="background: transparent;">
+                    <video autoplay loop muted playsinline class="card-video" style="height: 350px; width: 100%; object-fit: cover; border-radius: 16px;">
+                        <source src="../assets/video/black_run2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card" style="background: transparent;">
+                    <video autoplay loop muted playsinline class="card-video" style="height: 350px; width: 100%; object-fit: cover; border-radius: 16px;">
+                        <source src="../assets/video/black_run1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="project-specs" style="max-width: 900px;">
+                <ul class="spec-list" style="margin-bottom: 30px;">
+                    <li><strong>Rapid 3D Prototyping:</strong> Having no prior 3D modeling experience, I spent 10 hours learning the basics from scratch to create our first functional character mesh.</li>
+                    <li><strong>Automated Rigging & Animation:</strong> Instead of hand-animating, I utilized Mixamo to automatically generate rigs that perfectly preserved the model's posture. I then sourced high-quality 3D animations (attacks, dodges, blocks) from the Unity Asset Store, allowing them to share the same underlying bone structure.</li>
+                    <li><strong>Unity Shaders & Rendering:</strong> I adapted an open-source shader pipeline (PixelArtPipeline by Broxxar) inside Unity. By adjusting the model scale factor and forcing the animations to play in-place (stripping root X/Z transforms), I could capture the 3D movements perfectly.</li>
+                    <li><strong>Sprite Sheet Generation:</strong> The final step of the pipeline automatically captures the shaded 3D model at 60fps and exports it directly into Unity's 2D URP texture folders as a ready-to-use 2D sprite sheet.</li>
+                </ul>
+
+                <a href="https://www.bilibili.com/video/BV1mWt4eJEv6" target="_blank" class="btn-outline">Watch My DevLog Tutorial (it got over 1000 views) ↗</a>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 15px;"><em>I documented my research and implementation in a video devlog to help other indie developers facing the same art bottlenecks.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container project-detail-section">
+        <h2 style="margin-bottom: 30px;">Demonstration Results</h2>
+        
+        <div class="canvas-showcase" style="margin-bottom: 40px;">
+            <div class="canvas-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="canvas-title">level1 demo</span>
+            </div>
+            <img src="../assets/image/black_demo1.PNG" alt="demo" class="card-image" style="height: 750px; border-radius: 16px; margin-bottom: 20px; object-fit: cover;">
+        </div>
+
+        <div class="canvas-showcase">
+            <div class="canvas-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="canvas-title">in-egine demo</span>
+            </div>
+            <video autoplay loop muted playsinline class="interactive-iframe" style="object-fit: cover; height: 500px;">
+                <source src="../assets/video/black-gameplay.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Waldron Wang. Built with C#, Unity, and Maya</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

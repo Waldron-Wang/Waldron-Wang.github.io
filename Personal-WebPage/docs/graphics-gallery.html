@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Projects Gallery | Waldron Wang</title>
+    <link rel="stylesheet" href="../css/style.css">
+    </head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="../index.html" style="color: inherit;">WW.</a></div>
+        <ul class="nav-links">
+            <li><a href="../index.html#projects">← Back to Portfolio</a></li>
+            <li><a href="resume.pdf" target="_blank" class="btn-outline">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-hero container">
+        <h1>Computer Graphics Projects Gallery</h1>
+        <p class="tech-stack-large">JavaScript | HTML5 Canvas | Real-Time Animation | Interactive Systems</p>
+        <div class="project-links">
+            <a href="https://github.com/Waldron-Wang/Computer-Graphic-Gallery" target="_blank" class="btn-outline">View GitHub Repository</a>
+        </div>
+    </header>
+
+
+    <section class="container project-detail-section">
+        <div class="canvas-showcase">
+            <div class="canvas-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="canvas-title">fireworks.js</span>
+            </div>
+            <canvas id="fireworks-canvas" class="interactive-canvas"></canvas>
+            
+            <div class="canvas-controls">
+                <span></span>
+                <input type="range" id="fw-freq" min="0" max="0.1" step="0.001" value="0.00">
+                <span></span>
+            </div>
+            
+            <div class="canvas-hint">Click the screen to launch fireworks Or drag the slider to change launch frequency.</div>
+        </div>
+        
+        <div class="project-specs">
+            <h2>Firework Physics Simulation</h2>
+            <ul class="spec-list">
+                <li>Implemented real-time particle system with 50–250 particles per explosion.</li>
+                <li>Modeled projectile motion under gravity and drag with analytical launch velocity computation.</li>
+                <li>Designed reverse-integrated motion trails and stochastic alpha decay effects.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container project-detail-section">
+        <div class="canvas-showcase">
+            <div class="canvas-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="canvas-title">quadcopter.js</span>
+            </div>
+            <canvas id="quadcopter-canvas" class="interactive-canvas"></canvas>
+            <div class="canvas-hint">Use W-A-S-D to navigate, Space to fire projectiles.</div>
+        </div>
+        
+        <div class="project-specs">
+            <h2>Quadcopter Flight Simulator</h2>
+            <ul class="spec-list">
+                <li>Implemented parametric motion models (circular, figure-eight, banked weave).</li>
+                <li>Built frame-rate independent animation system using delta-time normalization.</li>
+                <li>Developed WASD-controlled navigation with projectile system.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Waldron Wang. Built with HTML, twine, CSS, & JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="../js/fireworks.js"></script>
+    <script src="../js/quadcopters.js"></script>
+</body>
+</html>

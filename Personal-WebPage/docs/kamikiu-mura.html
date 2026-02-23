@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamikiu Mura | Waldron Wang</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">WW.</a></div>
+        <ul class="nav-links">
+            <li><a href="../index.html#projects">← Back to Portfolio</a></li>
+            <li><a href="resume.pdf" target="_blank" class="btn-outline">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-hero container">
+        <h1>Kamikiu Mura</h1>
+        <p class="tech-stack-large">C# | Unity | 2D Adventure | AI Systems</p>
+    </header>
+
+    <section class="container project-detail-section">
+        
+        <div class="canvas-showcase">
+            <div class="canvas-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="canvas-title">kamikiu_gameplay_capture.mp4</span>
+            </div>
+            
+            <video autoplay loop muted playsinline class="interactive-iframe" style="object-fit: cover;">
+                <source src="../assets/video/kamikiu-gameplay.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>            
+            <div class="canvas-hint">Gameplay capture demonstrating enemy pathfinding and combat states</div>
+        </div>
+
+        <div class="project-links" style="text-align: center;">
+            <a href="https://github.com/Waldron-Wang/Kamikiu-Mura" target="_blank" class="btn-outline">Play Link</a>
+        </div>
+        
+        <div class="project-details-grid">
+            
+            <div class="game-description">
+                <h2>Engineering the World</h2>
+                <p>Kamikiu Mura is a 2D adventure game focused on exploration. The core development challenge was creating a responsive, intelligent world that reacts to player movement and actions in real-time.</p>
+            </div>
+
+            <div class="project-specs">
+                <h3>Technical Implementation</h3>
+                <p class="tech-stack" style="margin-bottom: 15px;">Role: Lead Programmer / Developer</p>
+                <ul class="spec-list">
+                    <li>Implemented enemy AI using A* pathfinding and finite state machines.</li>
+                    <li>Integrated AI behavior with Unity animation and collision systems to ensure frame-perfect hit detection.</li>
+                    <li>Engineered modular C# scripts for character controllers, allowing for easily tunable physics and movement parameters.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Waldron Wang. Built with HTML, CSS, & JavaScript.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -520,3 +520,9 @@ footer {
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Adds a sleek divider line */
 }
+
+/* --- Global Resets --- */
+html, body {
+    overflow-x: hidden; /* Kills any horizontal page shifting dead in its tracks */
+    width: 100%;
+}
